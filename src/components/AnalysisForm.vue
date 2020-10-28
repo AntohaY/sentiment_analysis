@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main class="pink lighten-3">
+    <v-main class="blue lighten-3">
       <v-container>
         <v-row>
           <v-col cols="4">
@@ -36,7 +36,11 @@
                     min-height="70vh"
                     rounded="lg"
             >
-              <div>курвааааааа</div>
+<!--              <v-img-->
+<!--                      max-height="150"-->
+<!--                      max-width="250"-->
+<!--                      src="../../src/assets/images/sad_happy_masks.png"-->
+<!--              ></v-img>-->
               <div>{{ result }}</div>
             </v-sheet>
           </v-col>

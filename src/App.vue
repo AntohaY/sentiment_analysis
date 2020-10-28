@@ -34,11 +34,11 @@
       </v-container>
     </v-app-bar>
 
-    <v-main class="pink lighten-3">
+    <v-main class="blue lighten-3">
       <AnalysisForm></AnalysisForm>
     </v-main>
   </v-app>
-</template>
+</template>s
 
 <script>
 import AnalysisForm from './components/AnalysisForm';
