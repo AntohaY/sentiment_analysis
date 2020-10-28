@@ -1,9 +1,49 @@
 <template>
-  <div class="hello">
-    <input v-model="message" placeholder="Text goes here...">
-    <button v-on:click="analyseText(message)">Send :)</button>
-    <div>{{ result }}</div>
-  </div>
+  <v-app>
+    <v-main class="pink lighten-3">
+      <v-container>
+        <v-row>
+          <v-col cols="4">
+            <v-sheet
+                    class="pa-4 text-center"
+                    elevation="4"
+                    rounded="lg"
+                    min-height="20vh"
+            >
+              <v-text-field
+                      label="Text goes here..."
+                      placeholder="I love you!"
+                      outlined
+                      v-model="message"
+              >
+              </v-text-field>
+              
+              <v-divider class="my-2"></v-divider>
+
+              <v-btn
+                      color="success"
+                      elevation="4"
+                      rounded
+                      v-on:click="analyseText(message)">Send :)
+              </v-btn>
+            </v-sheet>
+          </v-col>
+
+          <v-col xs="6">
+            <v-sheet
+                    class="pa-4"
+                    elevation="4"
+                    min-height="70vh"
+                    rounded="lg"
+            >
+              <div>курвааааааа</div>
+              <div>{{ result }}</div>
+            </v-sheet>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
@@ -13,12 +53,10 @@
 
   export default {
   name: 'AnalysisForm',
-  data() {
-    return {
-      message: "",
-      result: ""
-    };
-  },
+  data: () => ({
+    message: "",
+    result: ""
+  }),
   methods: {
     async analyseText(message) {
       try {
